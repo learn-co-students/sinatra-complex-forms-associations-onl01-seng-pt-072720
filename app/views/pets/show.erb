@@ -1,1 +1,6 @@
-show.erb
+<br>
+Name: <%= @pet.name %>
+<br>
+<br>
+<% owner = Owner.all.find(@pet.owner_id) %>
+Owner: <%= owner.name unless owner.blank? %>

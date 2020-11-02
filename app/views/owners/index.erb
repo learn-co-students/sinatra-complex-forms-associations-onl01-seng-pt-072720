@@ -1,1 +1,6 @@
-index.erb
+<% @owners.each do |owner| %>
+    <%= owner.name %> : 
+        <% owner.pets.each do |pet| %>
+            <%= pet.name %>
+        <% end %> 
+<% end %>
