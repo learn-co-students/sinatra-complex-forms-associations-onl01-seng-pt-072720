@@ -1,1 +1,7 @@
-index.erb
+
+<% @pets.each do |pet| %>
+    <% @owner = @owners.select {|owner| owner.id == pet.owner_id} %>
+    Owner: <%= @owner[0].name unless @owner[0].nil? %>
+    <%= pet.id %>. pet: <%= pet.name %>
+    
+<% end %>
